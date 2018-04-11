@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="crm4GDbLinks" class="dbTools.impl.Crm4GDbLinksDevelop">
+	</bean>
+	<bean id="crmCsbDbLinks" class="dbTools.impl.CrmCsbDbLinksDevelop"></bean>
+
+	<bean id="lte4GDao" class="csbReport.dao.Lte4GDao">
+		<property name="crm4GDbLinks" ref="crm4GDbLinks" />
+		<property name="crmCsbDbLinks" ref="crmCsbDbLinks" />
+	</bean>
+
+	<bean id="thread31" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+		<property name="dbNbr" value="3"></property>
+		<property name="path" value="D:\maven\target\"></property>
+		<property name="deadDt" value="2017-06-01 00:00:00"></property>
+	</bean>
+	<bean id="crmSpringAction" class="csbReport.action.GetUnFinishedOrder">
+	<property name="getOrderList">
+	<list>
+	<ref bean="thread31"></ref>
+	</list>
+	</property>
+	</bean>
+</beans>
+

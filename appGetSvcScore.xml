@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="crm4GDbLinks" class="kira.db.tool.impl.Crm4gDbLinksDevelop">
+	</bean>
+	<bean id="crmCsbDbLinks" class="kira.db.tool.impl.CrmCsbDbLinksDevelop"></bean>
+
+	<bean id="csbReportDao" class="csbReport.dao.CsbReportDao">
+		<property name="crm4gDbLinks" ref="crm4gDbLinks" />
+		<property name="crmCsbDbLinks" ref="crmCsbDbLinks" />
+	</bean>
+
+
+
+
+	<bean id="crmSpringAction" class="csbReport.action.GetSvcScoreAction">
+		<property name="csbReportDao" ref="csbReportDao"></property>
+		<property name="startDt" value="2017-11-01 00:00:00" />
+		<property name="overDt" value="2017-12-01 00:00:00" />
+		<property name="path" value="D:\maven\target\" />
+		<property name="flag" value="201711"></property>
+		<property name="svcCodeList">
+			<list>
+				<!--<value>SVC86084|3G</value>
+				<value>SVC86015|3G</value>
+				<value>SVC86068|3G</value>
+				<value>SVC11010|3G</value>
+				<value>SVC11009|3G</value>
+				<value>SVC17002|3G</value>
+				<value>SVC33003|3G</value>
+				<value>SVC86055|3G</value>
+				<value>SVC80002|4G</value>
+				<value>SVC80003|4G</value>-->
+				<value>SVC80009|4G</value>
+				<!--<value>SVC80028|4G</value>
+				<value>SVC80065|4G</value>
+				<value>SVC86039|4G</value>
+				<value>SVC86053|4G</value>
+				<value>SVC86055|4G</value>
+				<value>SVC86063|4G</value>-->
+			</list>
+		</property>
+	</bean>
+</beans>
+

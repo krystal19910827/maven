@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="crm4GDbLinks" class="kira.db.tool.impl.Crm4gDbLinksDevelop">
+	</bean>
+	<bean id="crmCsbDbLinks" class="kira.db.tool.impl.CrmCsbDbLinksDevelop"></bean>
+
+	<bean id="lte4GDao" class="csbReport.dao.Lte4GDao">
+		<property name="crm4GDbLinks" ref="crm4GDbLinks" />
+		<property name="crmCsbDbLinks" ref="crmCsbDbLinks" />
+	</bean>
+	
+	<bean id="thread02" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="2"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	<bean id="thread01" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="1"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	<bean id="thread03" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="3"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	<bean id="thread04" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="4"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+
+	<bean id="thread05" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="5"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	<bean id="thread06" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="6"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread07" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="7"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread08" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="8"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread09" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="9"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread10" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="10"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread11" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="11"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	
+	<bean id="thread12" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="12"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread13" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="13"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	<bean id="thread14" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="14"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread15" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="15"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread16" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="16"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread17" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="17"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread18" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="18"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread19" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="19"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	<bean id="thread20" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="20"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	 
+	
+	
+	<bean id="thread21" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="21"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	<bean id="thread22" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="22"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	<bean id="thread23" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="23"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	<bean id="thread24" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="24"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	<bean id="thread25" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="25"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	<bean id="thread26" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="26"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	<bean id="thread27" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="27"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	<bean id="thread28" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="28"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	<bean id="thread29" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="29"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	<bean id="thread30" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="30"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	<bean id="thread31" class="csbReport.thread.Lte4GThread">
+		<property name="lte4GDao" ref="lte4GDao"></property>
+ 		<property name="dbNbr" value="31"></property>
+		<property name="path" value="cache/"></property>
+		<property name="deadDt" value="2018-03-01 00:00:00"></property>
+	</bean>
+	
+	
+	
+	
+
+
+	<bean id="crmSpringAction" class="csbReport.action.GetUnFinishedOrder">
+		<property name="getOrderList">
+			<list>
+				<ref bean="thread01"></ref>
+				<ref bean="thread02"></ref>
+				<ref bean="thread03"></ref>
+				<ref bean="thread04"></ref>
+				<ref bean="thread05"></ref>
+				<ref bean="thread06"></ref>
+				<ref bean="thread07"></ref>
+				<ref bean="thread08"></ref>
+				<ref bean="thread09"></ref>
+				<ref bean="thread10"></ref>
+				
+				<ref bean="thread11"></ref>
+				<ref bean="thread12"></ref>
+				<ref bean="thread13"></ref>
+				<ref bean="thread14"></ref>
+				<ref bean="thread15"></ref>
+				<ref bean="thread16"></ref>
+				<ref bean="thread17"></ref>
+				<ref bean="thread18"></ref>
+				<ref bean="thread19"></ref>
+				<ref bean="thread20"></ref>
+				
+				<ref bean="thread21"></ref>
+				<ref bean="thread22"></ref>
+				<ref bean="thread23"></ref>
+				<ref bean="thread24"></ref>
+				<ref bean="thread25"></ref>
+				<ref bean="thread26"></ref>
+				<ref bean="thread27"></ref>
+				<ref bean="thread28"></ref>
+				<ref bean="thread29"></ref>
+				<ref bean="thread30"></ref>
+ 				<ref bean="thread31"></ref>
+			</list>
+		</property>
+	</bean>
+</beans>
+

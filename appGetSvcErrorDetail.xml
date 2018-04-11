@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="crm4gDbLinks" class="kira.db.tool.impl.Crm4gDbLinksDevelop">
+	</bean>
+	<bean id="crmCsbDbLinks" class="kira.db.tool.impl.CrmCsbDbLinksDevelop"></bean>
+
+	<bean id="csbReportDao" class="csbReport.dao.CsbReportDao">
+		<property name="crm4gDbLinks" ref="crm4gDbLinks" />
+		<property name="crmCsbDbLinks" ref="crmCsbDbLinks" />
+	</bean>
+
+
+
+
+	<bean id="crmSpringAction" class="csbReport.action.GetSvcErrorDetailAction">
+		<property name="csbReportDao" ref="csbReportDao"></property>
+		<property name="startDt" value="2018-03-01 00:00:00" />
+		<property name="overDt" value="2018-03-31 23:59:59" />
+		<property name="path" value="D:\maven\target\" />
+		<property name="flag" value="201803"></property>
+		<property name="svcCodeList">
+			<list>
+				<value>SVC86084|3G</value>
+				<!--value>SVC11009|3G</value!>
+				<value>SVC86084|3G</value>
+				<value>SVC86015|3G</value>
+				<value>SVC86068|3G</value>
+				<value>SVC11010|3G</value>
+				<value>SVC33003|3G</value>
+				<value>SVC86055|3G</value>
+				<value>SVC80002|4G</value>
+				<value>SVC80003|4G</value>
+				<value>SVC80009|4G</value>
+				<value>SVC80028|4G</value>
+				<value>SVC80065|4G</value>
+				<value>SVC86039|4G</value>
+				<value>SVC86053|4G</value>
+				<value>SVC86055|4G</value>
+				<value>SVC86063|4G</value>
+			</list>
+		</property>
+		<property name="dstSysCode">
+			<list>
+				<value>安徽|6003010001</value>
+				<value>贵州|6004020001</value>
+				<value>山东|6099030001</value>
+				<value>广东|6001010001</value>
+				<value>江苏|6001030001</value>
+				<value>四川|6002010001</value>
+				<value>浙江|6001040001</value>
+
+				<value>陕西|6002040001</value>
+				<value>福建|6001050001</value>
+				<value>上海|6001020001</value>
+				<value>河北|6099060001</value>
+				<value>内蒙古|6099080001</value>
+				<value>湖南|6002030001</value>
+				<value>湖北|6002020001</value>
+				<value>贵州|6004020001</value>
+				<value>重庆|6003040001</value>
+				<value>北京|6090010001</value>
+				<value>江西|6003050001</value>
+				<value>辽宁|6099050001</value>
+				<value>吉林|6099090001</value>
+				<value>黑龙江|6099100001</value>
+				<value>云南|6002050001</value>
+				<value>广西|6003020001</value>
+				<value>山西|6099070001</value>
+
+				<value>新疆|6003030001</value>
+				<value>天津|6099020001</value>
+				<value>青海|6004050001</value>
+				<value>甘肃|6004010001</value>
+				<value>河南|6099040001</value>
+				<value>海南|6004030001</value>
+				<value>宁夏|6004040001</value>
+				<value>西藏|6004060001</value>
+			</list>
+
+		</property>
+	</bean>
+</beans>
+
